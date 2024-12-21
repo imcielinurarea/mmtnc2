@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clone Repository') {
+            steps {
+                echo 'Cloning repository...'
+                git branch: 'master', url: 'https://github.com/imcielinurarea/mmtnc2.git'
+            }
+        }
+    }
+}
